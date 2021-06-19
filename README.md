@@ -3,7 +3,7 @@
 
 https://itch.io/jam/gmtk-2021
 
-![Image of Funem](https://img.itch.zone/aW1nLzYyMDc3OTgucG5n/original/aOHUkp.png)
+<img src="https://img.itch.zone/aW1nLzYyMDc3OTgucG5n/original/aOHUkp.png" width="364" height="364" />
 
 ## Details 
 
