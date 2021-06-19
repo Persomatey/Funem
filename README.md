@@ -3,7 +3,7 @@
 
 https://itch.io/jam/gmtk-2021
 
-<img src="https://img.itch.zone/aW1nLzYyMDc3OTgucG5n/original/aOHUkp.png" width="364" height="364" />
+<img src="https://img.itch.zone/aW1nLzYyMDc3OTgucG5n/original/aOHUkp.png" width="347" height="347" />
 
 ## Details 
 
