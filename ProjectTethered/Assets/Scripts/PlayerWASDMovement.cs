@@ -10,6 +10,8 @@ public class PlayerWASDMovement : MonoBehaviour
 	public bool westRes;
 	public bool eastRes;
 
+	public bool lastDir; 
+
 	void Update()
 	{
 		Movement(); 
@@ -35,6 +37,17 @@ public class PlayerWASDMovement : MonoBehaviour
 			transform.Translate(transform.right * Time.deltaTime * speed);
 		}
 		#endregion Movement
+
+		#region Last Direction 
+		if (Input.GetKey("a") && !Input.GetKey("d"))
+		{
+			lastDir = false;
+		}
+		else if (Input.GetKey("d") && !Input.GetKey("a"))
+		{
+			lastDir = true;
+		}
+		#endregion Last Direction
 
 		#region Restraints
 		RaycastHit northHit;

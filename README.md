@@ -58,6 +58,18 @@ https://trello.com/b/TFLqyVVL/project-tethered
 <blockquote>
 
 <details>
+<summary>CL-000001 (The Combat Update)</summary>
+<blockquote>
+
+- Made the following changes: 
+	- Added Unity project as it was when submitted 
+	- Added .gitignore file 
+	- Edited the README to reflect the above changes 
+
+</blockquote>
+</details>
+
+<details>
 <summary>CL-000000 (The First Update)</summary>
 <blockquote>
 

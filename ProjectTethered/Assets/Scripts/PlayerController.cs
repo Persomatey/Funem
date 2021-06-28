@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
 {
 	public GameObject wasd;
 	public GameObject arrow;
-	private GameObject ropeMeterImg;
+	//private GameObject ropeMeterImg;
 	private GameObject ropeMeterFillImg;
 	int curRopeExt; 
 	public Sprite[] ropeMeterArr;
@@ -24,7 +24,8 @@ public class PlayerController : MonoBehaviour
 	private SpriteRenderer arrowItemImg;
 	public Sprite[] itemImages;
 	public GameObject swordPrefab; 
-	public bool swordSwinging;
+	public bool swordSwingingWasd;
+	public bool swordSwingingArro;
 	public bool canChopTree;
 	public GameObject chosenTree;
 	public bool canOpenDoor;
@@ -52,7 +53,7 @@ public class PlayerController : MonoBehaviour
 	void Start()
 	{
 		curRopeExt = 5; 
-		ropeMeterImg = GameObject.Find("RopeMeterImg");
+		//ropeMeterImg = GameObject.Find("RopeMeterImg");
 		ropeMeterFillImg = GameObject.Find("RopeMeterFillImg");
 		arrow = GameObject.Find("PlayerArrow");
 		wasd = GameObject.Find("PlayerWASD");
@@ -62,7 +63,8 @@ public class PlayerController : MonoBehaviour
 		source = GetComponent<AudioSource>();
 		wasdItem = 0;
 		arrowItem = 0;
-		swordSwinging = false;
+		swordSwingingWasd = false;
+		swordSwingingArro = false;
 
 		health = maxHealth;
 		heart1 = GameObject.Find("Heart1").GetComponent<Image>();
@@ -145,10 +147,10 @@ public class PlayerController : MonoBehaviour
 
 					break;
 				case 1:
-					if (!swordSwinging)
+					if (!swordSwingingArro)
 					{
 						Debug.Log("Arrow uses Sword");
-						swordSwinging = true;
+						swordSwingingArro = true;
 						Instantiate(swordPrefab, arrow.transform);
 					}
 					else
@@ -191,10 +193,10 @@ public class PlayerController : MonoBehaviour
 					Debug.Log("Wasd not holing item");
 					break;
 				case 1:
-					if (!swordSwinging)
+					if (!swordSwingingWasd)
 					{
 						Debug.Log("Wasd uses Sword");
-						swordSwinging = true;
+						swordSwingingWasd = true;
 						Instantiate(swordPrefab, wasd.transform);
 					}
 					else

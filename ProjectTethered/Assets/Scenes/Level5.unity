@@ -2236,6 +2236,7 @@ MonoBehaviour:
   southRes: 0
   westRes: 0
   eastRes: 0
+  lastDir: 0
 --- !u!50 &509386978
 Rigidbody2D:
   serializedVersion: 4
@@ -34145,6 +34146,7 @@ MonoBehaviour:
   matA: {fileID: 2100000, guid: 0b92f4f4866179a4b99c6471d8ce2d40, type: 2}
   matB: {fileID: 2100000, guid: f6a13c1fbf96ec047b4547d64dc808b0, type: 2}
   ropeStretchSFX: {fileID: 8300000, guid: acef9de947db66b46b33733cac326d3b, type: 3}
+  lastDir: 0
 --- !u!212 &1721797947
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -35619,11 +35621,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6540179788558269161, guid: 8eb6690afef920041ba07cb06193a908, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13.16
+      value: 12.66
       objectReference: {fileID: 0}
     - target: {fileID: 6540179788558269161, guid: 8eb6690afef920041ba07cb06193a908, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.38
+      value: -5.27
       objectReference: {fileID: 0}
     - target: {fileID: 6540179788558269161, guid: 8eb6690afef920041ba07cb06193a908, type: 3}
       propertyPath: m_LocalPosition.z

@@ -18,7 +18,9 @@ public class PlayerArrowsMovement : MonoBehaviour
 
 	private AudioSource source;
 	public AudioClip ropeStretchSFX;
-	private bool sfxPlaying; 
+	private bool sfxPlaying;
+
+	public bool lastDir; // false = left , false = right 
 
 	void Start()
 	{
@@ -83,6 +85,17 @@ public class PlayerArrowsMovement : MonoBehaviour
 			transform.Translate(transform.right * Time.deltaTime * speed);
 		}
 		#endregion Movement
+
+		#region Last Direction 
+		if (Input.GetKey("left") && !Input.GetKey("right"))
+		{
+			lastDir = false; 
+		}
+		else if (Input.GetKey("right") && !Input.GetKey("left"))
+		{
+			lastDir = true;
+		}
+		#endregion Last Direction
 
 		#region Restraints
 		RaycastHit northHit;

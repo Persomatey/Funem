@@ -80,6 +80,7 @@ public class Enemy : MonoBehaviour
 			health = 0;
 			if (!coStarted)
 			{
+				//GetComponent<BoxCollider2D>().enabled = false; 
 				coStarted = true;
 				source.PlayOneShot(deathSFX); 
 				StartCoroutine(WaitToDie());
@@ -104,10 +105,13 @@ public class Enemy : MonoBehaviour
 	{
 		if (col.gameObject.tag == "Player")
 		{
-			GameObject.Find("PlayerController").GetComponent<PlayerController>().TakeDamage(1);
-			Vector2 direction = (col.transform.position - transform.position).normalized;
-			playerObj.GetComponent<Rigidbody2D>().AddForce(direction * 1000);
-			StartCoroutine(ForceStopper());
+			if (!coStarted)
+			{
+				GameObject.Find("PlayerController").GetComponent<PlayerController>().TakeDamage(1);
+				Vector2 direction = (col.transform.position - transform.position).normalized;
+				playerObj.GetComponent<Rigidbody2D>().AddForce(direction * 1000);
+				StartCoroutine(PlayerForceStopper());
+			}
 		}
 		if (col.gameObject.tag == "Wall")
 		{
@@ -134,7 +138,20 @@ public class Enemy : MonoBehaviour
 		}
 	}
 
-	IEnumerator ForceStopper()
+	public void CallingEnemyForceStopper()
+	{
+		StartCoroutine(EnemyForceStopper()); 
+	}
+
+	IEnumerator EnemyForceStopper()
+	{
+		yield return new WaitForSeconds(0.1f);
+		Debug.Log("<color=red>Stopping Velocity</color>");
+		GetComponent<Enemy>().hit = false;
+		GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+	}
+
+	IEnumerator PlayerForceStopper()
 	{
 		yield return new WaitForSeconds(0.1f);
 		GameObject.Find("PlayerController").GetComponent<PlayerController>().wasd.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
