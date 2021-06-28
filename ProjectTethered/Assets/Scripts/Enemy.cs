@@ -8,6 +8,7 @@ public class Enemy : MonoBehaviour
 	private const int maxHealth = 2;
 	public bool isAware;
 	public GameObject playerObj;
+	public GameObject playerObjOther; 
 	private float speed; 
 	private Transform healthBarCont;
 	public bool hit;
@@ -28,11 +29,27 @@ public class Enemy : MonoBehaviour
 		coStarted = false; 
 	}
 
-    void Update()
+    void FixedUpdate()
     {
 		CheckHealth();
 		UpdateHealthBar(); 
-		Behavior(); 
+		Behavior();
+		SpriteFlipper(); 
+	}
+
+	void SpriteFlipper()
+	{
+		if(playerObj)
+		{
+			if(playerObj.transform.position.x > transform.position.x)
+			{
+				GetComponent<SpriteRenderer>().flipX = true; 
+			}
+			else
+			{
+				GetComponent<SpriteRenderer>().flipX = false;
+			}
+		}
 	}
 
 	void Behavior()
@@ -52,7 +69,7 @@ public class Enemy : MonoBehaviour
 
 	void Attack()
 	{
-		if (!hit)
+		if (!hit || !coStarted)
 		{
 			transform.position = Vector3.MoveTowards(transform.position, playerObj.transform.position, speed * Time.deltaTime);
 		}
@@ -125,6 +142,10 @@ public class Enemy : MonoBehaviour
 		if (col.gameObject.tag == "Player")
 		{
 			isAware = true;
+			if (playerObj)
+			{
+				playerObjOther = playerObj;
+			}
 			playerObj = col.gameObject; 
 		}
 	}
@@ -133,8 +154,23 @@ public class Enemy : MonoBehaviour
 	{
 		if (col.gameObject.tag == "Player")
 		{
-			isAware = false;
-			playerObj = null; 
+			if (col.gameObject == playerObjOther)
+			{
+				playerObjOther = null;
+			}
+			else
+			{
+				if(playerObjOther)
+				{
+					playerObj = playerObjOther;
+					playerObjOther = null; 
+				}
+				else
+				{
+					isAware = false;
+					playerObj = null;
+				}
+			}
 		}
 	}
 

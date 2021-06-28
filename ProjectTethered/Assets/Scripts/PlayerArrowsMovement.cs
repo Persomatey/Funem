@@ -14,7 +14,10 @@ public class PlayerArrowsMovement : MonoBehaviour
 	private LineRenderer line;
 
 	public Material matA;
+	public Material matAF; 
 	public Material matB;
+
+	public Material directionalMat; 
 
 	private AudioSource source;
 	public AudioClip ropeStretchSFX;
@@ -35,9 +38,18 @@ public class PlayerArrowsMovement : MonoBehaviour
 		sfxPlaying = false; 
 	}
 
-	void Update()
+	void FixedUpdate()
 	{
 		Movement();
+
+		if(wasd.transform.position.x < transform.position.x)
+		{
+			directionalMat = matA; 
+		}
+		else
+		{
+			directionalMat = matAF;
+		}
 
 		line = GetComponent<LineRenderer>();
 
@@ -52,7 +64,7 @@ public class PlayerArrowsMovement : MonoBehaviour
 		else if (Vector3.Distance(transform.position, wasd.transform.position) <= joint.distance)
 		{
 			joint.enabled = false;
-			line.material = matA;
+			line.material = directionalMat;
 		}
 
 		if (Vector3.Distance(transform.position, wasd.transform.position) > joint.distance)

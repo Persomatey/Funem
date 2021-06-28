@@ -58,6 +58,20 @@ https://trello.com/b/TFLqyVVL/project-tethered
 <blockquote>
 
 <details>
+<summary>CL-000002 (The AI Update)</summary>
+<blockquote>
+
+- Made the following changes: 
+	- Made it so that the sprite of the rope changes depending on which side Wasd is compared to Arro
+	- Made changes to the enemy AI 
+		- If a character leaves the area but the other character is still in the area, the rat will start chasing the other character 
+		- Made it so that the sprite flips depending on the position of the character it is chasing 
+	- Edited the README to reflect the above changes 
+
+</blockquote>
+</details>
+
+<details>
 <summary>CL-000001 (The Combat Update)</summary>
 <blockquote>
 

@@ -12,7 +12,7 @@ public class PlayerWASDMovement : MonoBehaviour
 
 	public bool lastDir; 
 
-	void Update()
+	void FixedUpdate()
 	{
 		Movement(); 
 	}

@@ -1993,6 +1993,7 @@ MonoBehaviour:
   southRes: 0
   westRes: 0
   eastRes: 0
+  lastDir: 0
 --- !u!50 &509386978
 Rigidbody2D:
   serializedVersion: 4
@@ -2595,7 +2596,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 97dc8e75440b1124f99638f4c1c47ec6, type: 3}
   - {fileID: 21300000, guid: 7de52898b8f971348b98600d3d2bf397, type: 3}
   swordPrefab: {fileID: 6540570256580953425, guid: c226c9c1f55ce6740b497ece72e554f7, type: 3}
-  swordSwinging: 0
+  swordSwingingWasd: 0
+  swordSwingingArro: 0
   canChopTree: 0
   chosenTree: {fileID: 0}
   canOpenDoor: 0
@@ -32782,8 +32784,11 @@ MonoBehaviour:
   westRes: 0
   eastRes: 0
   matA: {fileID: 2100000, guid: 0b92f4f4866179a4b99c6471d8ce2d40, type: 2}
+  matAF: {fileID: 2100000, guid: 954702714075b3f4784836a54e238b86, type: 2}
   matB: {fileID: 2100000, guid: f6a13c1fbf96ec047b4547d64dc808b0, type: 2}
+  directionalMat: {fileID: 0}
   ropeStretchSFX: {fileID: 8300000, guid: acef9de947db66b46b33733cac326d3b, type: 3}
+  lastDir: 0
 --- !u!212 &1721797947
 SpriteRenderer:
   m_ObjectHideFlags: 0
