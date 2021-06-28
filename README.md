@@ -62,9 +62,23 @@ https://trello.com/b/TFLqyVVL/project-tethered
 <blockquote>
 
 - Made the following changes: 
-	- Added Unity project as it was when submitted 
-	- Added .gitignore file 
+	- Made some changes to the combat: 
+		- Made sword swing faster 
+			- Speed was 1000 now it's 1500 
+		- Made sword swing either clockwise or counterclockwise depending on the last direction that character moved 
+			- Different depenging on whether it's Wasd or Arro 
+		- Made it so that both characters can swing their swords at the same time 
+	- Made some bug fixes: 
+		- Fixed bug where the enemy can still damage the player even if they're dead 
+			- Fixed this by checkinging if the death coroutine has started before dealing the damage 
+		- Fixed bug where dead enemies can be hit through walls 
+			- My previous fix for the aforementioned bug was to remove the collision which is what caused this bug 
+				- The fix for that bug also fixed this bug 
+		- Fixed bug where sometimes swinging the sword would make the enemies go flying way too far 
+			- This was caused by having the coroutine that stopped velocity in the sword's script so this coroutine would not conclude if the sword was destroyed before the timer was up 
+			- Fixed this by putting the coroutine in the enemy's script instead 
 	- Edited the README to reflect the above changes 
+
 
 </blockquote>
 </details>
