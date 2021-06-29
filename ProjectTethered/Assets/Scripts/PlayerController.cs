@@ -82,7 +82,7 @@ public class PlayerController : MonoBehaviour
 		swapImgWasd = GameObject.Find("SwapImgWasd");
 	}
 
-	void Update()
+	void FixedUpdate()
 	{
 		UpdateHearts();
 		SwapItems();

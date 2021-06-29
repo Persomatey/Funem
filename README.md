@@ -58,6 +58,18 @@ https://trello.com/b/TFLqyVVL/project-tethered
 <blockquote>
 
 <details>
+<summary>CL-000005 (The Post Processing Update)</summary>
+<blockquote>
+
+- Made the following changes: 
+	- Changed the Update() method in the PlayerController.cs script to FixedUpdate() as it now involves movement 
+	- Added some post processing 
+	- Edited the README to reflect the above changes 
+
+</blockquote>
+</details>
+
+<details>
 <summary>CL-000004 (The Item Swap Update)</summary>
 <blockquote>
 
