@@ -14,7 +14,6 @@ public class PlayerController : MonoBehaviour
 	private const int maxRopeExt = 10;
 	private float curDistance; 
 	private float maxDistance;
-	private GameObject playerMes;
 	public Sprite ropeFull;
 	public Sprite ropeLoose;
 
@@ -57,7 +56,6 @@ public class PlayerController : MonoBehaviour
 		ropeMeterFillImg = GameObject.Find("RopeMeterFillImg");
 		arrow = GameObject.Find("PlayerArrow");
 		wasd = GameObject.Find("PlayerWASD");
-		playerMes = GameObject.Find("PlayerMessage");
 		wasdItemImg = GameObject.Find("WasdItem").GetComponent<SpriteRenderer>(); 
 		arrowItemImg = GameObject.Find("ArrowItem").GetComponent<SpriteRenderer>();
 		source = GetComponent<AudioSource>();
@@ -321,12 +319,8 @@ public class PlayerController : MonoBehaviour
 		{
 			source.PlayOneShot(RopeExtensionSFX);
 			curRopeExt++;
-			//ropeMeterImg.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, curRopeExt * 8);
-			//ropeMeterFillImg.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, (curRopeExt * 8) - 2);
 			int curRopeTemp = curRopeExt - 5;
-			//ropeMeterImg.GetComponent<Image>().sprite = ropeMeterArr[curRopeTemp++];
-			playerMes.GetComponent<Text>().text = "Rope Extended!"; 
-			playerMes.GetComponent<Animator>().Play("FadeOut"); 
+
 			Debug.Log("Rope Extended to " + curRopeExt);
 		}
 		else

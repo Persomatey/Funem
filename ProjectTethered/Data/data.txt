@@ -1,12 +1,12 @@
 Level 1 Unlocked: 
 T
 Level 2 Unlocked: 
-F
+T
 Level 3 Unlocked: 
-F
+T
 Level 4 Unlocked: 
-F
+T
 Level 5 Unlocked: 
-F
+T
 Level 6 Unlocked: 
-F
+T

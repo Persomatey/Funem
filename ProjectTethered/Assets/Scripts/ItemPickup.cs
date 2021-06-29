@@ -7,22 +7,21 @@ public class ItemPickup : MonoBehaviour
 {
 	public Sprite[] itemImages;
 	public int itemType;  // 0 = nothing , 1 = Sword , 2 = Axe , 3 = Key 
-	private Text mesText;
+	private GameObject mesText;
 	private string itemName;
 	private bool overlapping;
 	private GameObject chosenPlayer;
 	private GameObject playerCont;
-	private GameObject playerMes;
 	private AudioSource source;
 	public AudioClip pickupSFX;
-	private bool coStarted; 
+	private bool coStarted;
+	public GameObject spawnText; 
 
 	void Start()
 	{
 		source = GetComponent<AudioSource>();
 		playerCont = GameObject.Find("PlayerController");
-		mesText = GameObject.Find("PlayerMessagePickups").GetComponent<Text>();
-		playerMes = GameObject.Find("PlayerMessage");
+		//mesText = GameObject.Find("PlayerMessagePickups").GetComponent<Text>();
 		overlapping = false;
 		coStarted = false; 
 
@@ -60,38 +59,39 @@ public class ItemPickup : MonoBehaviour
 
 		if (overlapping && chosenPlayer.name == "PlayerWASD" && Input.GetKeyDown("e"))
 		{
-			SwapWeapon();
+			ObtainWeapon();
 		}
 
 		if (overlapping && chosenPlayer.name == "PlayerArrow" && Input.GetKeyDown(KeyCode.RightControl))
 		{
-			SwapWeapon();
+			ObtainWeapon();
 		}
 	}
 
-	void SwapWeapon()
+	void ObtainWeapon()
 	{
 		source.PlayOneShot(pickupSFX);
 		if (chosenPlayer.name == "PlayerArrow")
 		{
 			int tempItem = playerCont.GetComponent<PlayerController>().arrowItem;
 			playerCont.GetComponent<PlayerController>().arrowItem = itemType;
+			GameObject spawned; 
 
-			switch(itemType)
+			switch (itemType)
 			{
 				case 0: 
 					break;
 				case 1:
-					playerMes.GetComponent<Text>().text = "Sword obtained!";
-					playerMes.GetComponent<Animator>().Play("FadeOut");
+					spawned = Instantiate(spawnText, chosenPlayer.transform);
+					spawned.GetComponent<TextMesh>().text = "Sword obtained!"; 
 					break; 
 				case 2:
-					playerMes.GetComponent<Text>().text = "Axe obtained!";
-					playerMes.GetComponent<Animator>().Play("FadeOut");
+					spawned = Instantiate(spawnText, chosenPlayer.transform);
+					spawned.GetComponent<TextMesh>().text = "Axe obtained!";
 					break; 
 				case 3:
-					playerMes.GetComponent<Text>().text = "Key obtained!";
-					playerMes.GetComponent<Animator>().Play("FadeOut");
+					spawned = Instantiate(spawnText, chosenPlayer.transform);
+					spawned.GetComponent<TextMesh>().text = "Key obtained!";
 					break; 
 			}
 
@@ -102,22 +102,23 @@ public class ItemPickup : MonoBehaviour
 		{
 			int tempItem = playerCont.GetComponent<PlayerController>().wasdItem;
 			playerCont.GetComponent<PlayerController>().wasdItem = itemType;
+			GameObject spawned;
 
 			switch (itemType)
 			{
 				case 0:
 					break;
 				case 1:
-					playerMes.GetComponent<Text>().text = "Sword obtained!";
-					playerMes.GetComponent<Animator>().Play("FadeOut");
+					spawned = Instantiate(spawnText, chosenPlayer.transform);
+					spawned.GetComponent<TextMesh>().text = "Sword obtained!";
 					break;
 				case 2:
-					playerMes.GetComponent<Text>().text = "Axe obtained!";
-					playerMes.GetComponent<Animator>().Play("FadeOut");
+					spawned = Instantiate(spawnText, chosenPlayer.transform);
+					spawned.GetComponent<TextMesh>().text = "Axe obtained!";
 					break;
 				case 3:
-					playerMes.GetComponent<Text>().text = "Key obtained!";
-					playerMes.GetComponent<Animator>().Play("FadeOut");
+					spawned = Instantiate(spawnText, chosenPlayer.transform);
+					spawned.GetComponent<TextMesh>().text = "Key obtained!";
 					break;
 			}
 
@@ -143,15 +144,13 @@ public class ItemPickup : MonoBehaviour
 				itemName = "Pick up Key?";
 				break;
 		}
-
-		
 	}
 
 	private void OnTriggerEnter2D(Collider2D col)
 	{
 		if (col.gameObject.tag == "Player")
 		{
-			mesText.text = "" + itemName;
+			col.transform.GetChild(1).GetComponent<TextMesh>().text = "" + itemName;
 			overlapping = true;
 			chosenPlayer = col.gameObject;
 		}
@@ -163,12 +162,13 @@ public class ItemPickup : MonoBehaviour
 		{
 			chosenPlayer = null;
 			overlapping = false;
-			mesText.text = " ";
+			col.transform.GetChild(1).GetComponent<TextMesh>().text = ""; 
 		}
 	}
 
 	IEnumerator WaitToDestroy()
 	{
+		chosenPlayer.transform.GetChild(1).GetComponent<TextMesh>().text = "";
 		yield return new WaitForSeconds(1);
 		Destroy(gameObject); 
 	}

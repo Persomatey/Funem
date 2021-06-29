@@ -130,6 +130,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 7de52898b8f971348b98600d3d2bf397, type: 3}
   itemType: 0
   pickupSFX: {fileID: 8300000, guid: 794a0458e09d1da4995610077e4a7dad, type: 3}
+  spawnText: {fileID: 8667291987376154542, guid: d8766f7480ecd2841920c752dd335cfe, type: 3}
 --- !u!82 &9035752415208399701
 AudioSource:
   m_ObjectHideFlags: 0

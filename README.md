@@ -58,6 +58,21 @@ https://trello.com/b/TFLqyVVL/project-tethered
 <blockquote>
 
 <details>
+<summary>CL-000003 (The Pickup Update)</summary>
+<blockquote>
+
+- Made the following changes: 
+	- Fixed bug where the text for an item still appears on screen even after the item has been picked up 
+		- Did this by completely redoing the way that the text works 
+			- Now I'm using instantiated 3DText objects 
+	- Fixed bug where the fadeout animation still occurs even if the item has already been picked up 
+		- Fixed this using the above method 
+	- Edited the README to reflect the above changes 
+
+</blockquote>
+</details>
+
+<details>
 <summary>CL-000002 (The AI Update)</summary>
 <blockquote>
 
