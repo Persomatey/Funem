@@ -47,7 +47,14 @@ public class PlayerController : MonoBehaviour
 	public AudioClip plateSFX;
 	public AudioClip itemSwapSFX;
 	public AudioClip RopeExtensionSFX;
-	public AudioClip selectionSFX; 
+	public AudioClip selectionSFX;
+
+	public GameObject swapImgWasd;
+	public GameObject swapImgArro;
+
+	private bool swappable;
+	private float swapSpeed; 
+
 
 	void Start()
 	{
@@ -63,11 +70,16 @@ public class PlayerController : MonoBehaviour
 		arrowItem = 0;
 		swordSwingingWasd = false;
 		swordSwingingArro = false;
+		swappable = false;
+		swapSpeed = 0.05f; 
 
 		health = maxHealth;
 		heart1 = GameObject.Find("Heart1").GetComponent<Image>();
 		heart2 = GameObject.Find("Heart2").GetComponent<Image>();
 		heart3 = GameObject.Find("Heart3").GetComponent<Image>();
+
+		swapImgArro = GameObject.Find("SwapImgArro"); 
+		swapImgWasd = GameObject.Find("SwapImgWasd");
 	}
 
 	void Update()
@@ -77,7 +89,8 @@ public class PlayerController : MonoBehaviour
 		RopeLength();
 		ItemUsage();
 		CheckHealth();
-		PauseListener(); 
+		PauseListener();
+		SwapItemsAnimation(); 
 	}
 
 	void PauseListener()
@@ -254,6 +267,45 @@ public class PlayerController : MonoBehaviour
 			int tempItem = wasdItem;
 			wasdItem = arrowItem;
 			arrowItem = tempItem;
+
+			// swap animation stuff 
+			swapImgWasd.GetComponent<SpriteRenderer>().sprite = wasdItemImg.sprite;
+			swapImgArro.GetComponent<SpriteRenderer>().sprite = arrowItemImg.sprite;
+
+			swapImgWasd.transform.parent = null;
+			swapImgArro.transform.parent = null;
+
+			swappable = true;
+		}
+	}
+
+	void SwapItemsAnimation()
+	{
+		if(swappable)
+		{
+			wasdItemImg.transform.localScale = new Vector3(0,0,1); 
+			arrowItemImg.transform.localScale = new Vector3(0,0,1);
+
+			swapImgWasd.transform.position = Vector3.MoveTowards(swapImgWasd.transform.position, arrow.transform.position, swapSpeed); 
+			swapImgArro.transform.position = Vector3.MoveTowards(swapImgArro.transform.position, wasd.transform.position, swapSpeed);
+
+			if (swapImgWasd.transform.position == arrow.transform.position)
+			{
+				swappable = false; 
+			}
+		}
+		else
+		{
+			swapImgWasd.transform.parent = wasd.transform;
+			swapImgArro.transform.parent = arrow.transform;
+
+			swapImgWasd.transform.localPosition = new Vector3(0,0,0); 
+			swapImgArro.transform.localPosition = new Vector3(0,0,0);
+
+			swapImgWasd.GetComponent<SpriteRenderer>().sprite = null;
+			swapImgArro.GetComponent<SpriteRenderer>().sprite = null;
+			wasdItemImg.transform.localScale = new Vector3(0.5f, 0.5f, 1);
+			arrowItemImg.transform.localScale = new Vector3(0.5f, 0.5f, 1);
 		}
 	}
 

@@ -58,6 +58,18 @@ https://trello.com/b/TFLqyVVL/project-tethered
 <blockquote>
 
 <details>
+<summary>CL-000004 (The Item Swap Update)</summary>
+<blockquote>
+
+- Made the following changes: 
+	- Added an item swap animation 
+		- Looks adorable 
+	- Edited the README to reflect the above changes 
+
+</blockquote>
+</details>
+
+<details>
 <summary>CL-000003 (The Pickup Update)</summary>
 <blockquote>
 
