@@ -10,21 +10,23 @@ public class Buttons : MonoBehaviour
 	public GameObject deathCanvas;
 	private float time;
 	private AudioSource source;
-	public AudioClip selectionSFX; 
+	public AudioClip selectionSFX;
+	public GameObject menuCanvas;
+	public GameObject creditsCanvas; 
 
 	private void Start()
 	{
 		gameObject.AddComponent<AudioSource>();
 		source = GetComponent<AudioSource>(); 
 
-		if (SceneManager.GetActiveScene().name == "MainMenu")
-		{
-			selectionSFX = GameObject.Find("MainMenuController").GetComponent<MainMenuController>().selectionSFX; 
-		}
-		else
-		{
-			selectionSFX = GameObject.Find("PlayerController").GetComponent<MainMenuController>().selectionSFX;
-		}
+		//if (SceneManager.GetActiveScene().name == "MainMenu")
+		//{
+		//	selectionSFX = GameObject.Find("MainMenuController").GetComponent<MainMenuController>().selectionSFX; 
+		//}
+		//else
+		//{
+		//	selectionSFX = GameObject.Find("PlayerController").GetComponent<MainMenuController>().selectionSFX;
+		//}
 
 		time = selectionSFX.length; 
 	}
@@ -42,8 +44,39 @@ public class Buttons : MonoBehaviour
 		SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
 	}
 
+	public void OpenCredits()
+	{
+		Time.timeScale = 1;
+		source.PlayOneShot(selectionSFX);
+		StartCoroutine(OpenCreditsCo());
+	}
+
+	IEnumerator OpenCreditsCo()
+	{
+		Time.timeScale = 1;
+		yield return new WaitForSeconds(time);
+		creditsCanvas.SetActive(true);
+		menuCanvas.SetActive(false);
+	}
+
+	public void OpenMainMenu()
+	{
+		Time.timeScale = 1;
+		source.PlayOneShot(selectionSFX);
+		StartCoroutine(OpenMainMenuCo());
+	}
+
+	IEnumerator OpenMainMenuCo()
+	{
+		Time.timeScale = 1;
+		yield return new WaitForSeconds(time);
+		creditsCanvas.SetActive(false);
+		menuCanvas.SetActive(true);
+	}
+
 	public void Resume()
 	{
+		Time.timeScale = 1;
 		source.PlayOneShot(selectionSFX);
 		StartCoroutine(ResumeCo()); 
 	}
@@ -54,7 +87,7 @@ public class Buttons : MonoBehaviour
 		mainCanvas.SetActive(true);
 		pauseCanvas.SetActive(false);
 		deathCanvas.SetActive(false);
-		Time.timeScale = 1;
+		//Time.timeScale = 1;
 	}
 
 	public void Retry()
@@ -62,6 +95,7 @@ public class Buttons : MonoBehaviour
 		source.PlayOneShot(selectionSFX); 
 		StartCoroutine(RetryCo()); 
 	}
+
 	IEnumerator RetryCo()
 	{
 		Time.timeScale = 1;

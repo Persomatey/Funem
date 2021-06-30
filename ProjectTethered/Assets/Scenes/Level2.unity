@@ -1210,9 +1210,9 @@ Canvas:
   m_GameObject: {fileID: 357466979}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
+  m_RenderMode: 1
+  m_Camera: {fileID: 963194227}
+  m_PlaneDistance: 1
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
@@ -1406,7 +1406,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 200.40002, y: 103.000015}
+  m_AnchoredPosition: {x: 200.40002, y: 103}
   m_SizeDelta: {x: 45, y: 45}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &384603301
@@ -2116,10 +2116,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21e4bcfd2f98a67438710326aeb53930, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainCanvas: {fileID: 0}
-  pauseCanvas: {fileID: 0}
-  deathCanvas: {fileID: 0}
-  selectionSFX: {fileID: 0}
+  mainCanvas: {fileID: 670143637}
+  pauseCanvas: {fileID: 1139621581}
+  deathCanvas: {fileID: 1126881789}
+  selectionSFX: {fileID: 8300000, guid: a4dfecc22a87e2249bf4537b89d85f35, type: 3}
+  menuCanvas: {fileID: 0}
+  creditsCanvas: {fileID: 0}
 --- !u!114 &639408791
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2291,9 +2293,9 @@ Canvas:
   m_GameObject: {fileID: 670143637}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
+  m_RenderMode: 1
+  m_Camera: {fileID: 963194227}
+  m_PlaneDistance: 1
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
@@ -2569,10 +2571,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21e4bcfd2f98a67438710326aeb53930, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainCanvas: {fileID: 0}
-  pauseCanvas: {fileID: 0}
-  deathCanvas: {fileID: 0}
-  selectionSFX: {fileID: 0}
+  mainCanvas: {fileID: 670143637}
+  pauseCanvas: {fileID: 1139621581}
+  deathCanvas: {fileID: 1126881789}
+  selectionSFX: {fileID: 8300000, guid: a4dfecc22a87e2249bf4537b89d85f35, type: 3}
+  menuCanvas: {fileID: 0}
+  creditsCanvas: {fileID: 0}
 --- !u!114 &751829891
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2915,6 +2919,7 @@ MonoBehaviour:
   itemSwapSFX: {fileID: 8300000, guid: 574d2a5d08c8b98448fe435777f71c4a, type: 3}
   RopeExtensionSFX: {fileID: 8300000, guid: 400a27cb07ee6654eb513d4b52e1587c, type: 3}
   selectionSFX: {fileID: 8300000, guid: a4dfecc22a87e2249bf4537b89d85f35, type: 3}
+  pauseSFX: {fileID: 0}
   swapImgWasd: {fileID: 0}
   swapImgArro: {fileID: 0}
 --- !u!4 &826746624
@@ -4228,9 +4233,9 @@ Canvas:
   m_GameObject: {fileID: 1126881789}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
+  m_RenderMode: 1
+  m_Camera: {fileID: 963194227}
+  m_PlaneDistance: 1
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
@@ -4439,9 +4444,9 @@ Canvas:
   m_GameObject: {fileID: 1139621581}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
+  m_RenderMode: 1
+  m_Camera: {fileID: 963194227}
+  m_PlaneDistance: 1
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
@@ -4508,7 +4513,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 14.400024, y: 103.000015}
+  m_AnchoredPosition: {x: 14.400024, y: 103}
   m_SizeDelta: {x: 45, y: 45}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1146665087
@@ -4837,10 +4842,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21e4bcfd2f98a67438710326aeb53930, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainCanvas: {fileID: 0}
+  mainCanvas: {fileID: 670143637}
   pauseCanvas: {fileID: 1139621581}
   deathCanvas: {fileID: 1126881789}
-  selectionSFX: {fileID: 0}
+  selectionSFX: {fileID: 8300000, guid: a4dfecc22a87e2249bf4537b89d85f35, type: 3}
+  menuCanvas: {fileID: 0}
+  creditsCanvas: {fileID: 0}
 --- !u!114 &1378157216
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5369,6 +5376,7 @@ MonoBehaviour:
   doorA2: {fileID: 1369852017}
   plateWin1: {fileID: 382766778}
   plateWin2: {fileID: 1610151351}
+  victorySFX: {fileID: 8300000, guid: d0f7431bf0e80844db5dfcb5a8ff2a9d, type: 3}
 --- !u!114 &1529899768
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33321,10 +33329,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21e4bcfd2f98a67438710326aeb53930, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainCanvas: {fileID: 0}
+  mainCanvas: {fileID: 670143637}
   pauseCanvas: {fileID: 1139621581}
   deathCanvas: {fileID: 1126881789}
-  selectionSFX: {fileID: 0}
+  selectionSFX: {fileID: 8300000, guid: a4dfecc22a87e2249bf4537b89d85f35, type: 3}
+  menuCanvas: {fileID: 0}
+  creditsCanvas: {fileID: 0}
 --- !u!114 &1776880021
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33845,10 +33855,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21e4bcfd2f98a67438710326aeb53930, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainCanvas: {fileID: 0}
+  mainCanvas: {fileID: 670143637}
   pauseCanvas: {fileID: 1139621581}
   deathCanvas: {fileID: 1126881789}
-  selectionSFX: {fileID: 0}
+  selectionSFX: {fileID: 8300000, guid: a4dfecc22a87e2249bf4537b89d85f35, type: 3}
+  menuCanvas: {fileID: 0}
+  creditsCanvas: {fileID: 0}
 --- !u!114 &1986133568
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34061,10 +34073,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21e4bcfd2f98a67438710326aeb53930, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainCanvas: {fileID: 0}
+  mainCanvas: {fileID: 670143637}
   pauseCanvas: {fileID: 1139621581}
-  deathCanvas: {fileID: 357466979}
-  selectionSFX: {fileID: 0}
+  deathCanvas: {fileID: 1126881789}
+  selectionSFX: {fileID: 8300000, guid: a4dfecc22a87e2249bf4537b89d85f35, type: 3}
+  menuCanvas: {fileID: 0}
+  creditsCanvas: {fileID: 0}
 --- !u!114 &2033838755
 MonoBehaviour:
   m_ObjectHideFlags: 0

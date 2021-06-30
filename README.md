@@ -49,6 +49,9 @@ https://trello.com/b/TFLqyVVL/project-tethered
 	- [Kenny Assets](https://www.kenney.nl/assets)
 - <b>SFX</b>
 	- [Hunter Goodin](https://huntergoodin.com/)
+- <b>Special Thanks</b>
+	- [Gerardo Bonnet](https://thethrillofmurder.github.io/Website-Gerardo/gerardo.html)
+	- [Mark Brown](https://www.youtube.com/c/MarkBrownGMT/)
 
 </blockquote>
 </details>
@@ -56,6 +59,22 @@ https://trello.com/b/TFLqyVVL/project-tethered
 <details>
 <summary>Change List</summary>
 <blockquote>
+
+<details>
+<summary>CL-000006 (The Credits Update)</summary>
+<blockquote>
+
+- Made the following changes: 
+	- Added a credits menu 
+	- Changed the way that the menus work slightly 
+	- Added SFX to every button in the game 
+	- Added a Pause SFX 
+	- Added SFX for when you win a level 
+	- Made the postprocessing work in the canvases too 
+	- Edited the README to reflect the above changes 
+
+</blockquote>
+</details>
 
 <details>
 <summary>CL-000005 (The Post Processing Update)</summary>

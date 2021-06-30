@@ -48,6 +48,7 @@ public class PlayerController : MonoBehaviour
 	public AudioClip itemSwapSFX;
 	public AudioClip RopeExtensionSFX;
 	public AudioClip selectionSFX;
+	public AudioClip pauseSFX; 
 
 	public GameObject swapImgWasd;
 	public GameObject swapImgArro;
@@ -71,7 +72,7 @@ public class PlayerController : MonoBehaviour
 		swordSwingingWasd = false;
 		swordSwingingArro = false;
 		swappable = false;
-		swapSpeed = 0.05f; 
+		swapSpeed = 0.5f; 
 
 		health = maxHealth;
 		heart1 = GameObject.Find("Heart1").GetComponent<Image>();
@@ -82,7 +83,7 @@ public class PlayerController : MonoBehaviour
 		swapImgWasd = GameObject.Find("SwapImgWasd");
 	}
 
-	void FixedUpdate()
+	private void Update()
 	{
 		UpdateHearts();
 		SwapItems();
@@ -90,6 +91,10 @@ public class PlayerController : MonoBehaviour
 		ItemUsage();
 		CheckHealth();
 		PauseListener();
+	}
+
+	void FixedUpdate()
+	{
 		SwapItemsAnimation(); 
 	}
 
@@ -99,13 +104,17 @@ public class PlayerController : MonoBehaviour
 		{
 			if(Time.timeScale == 0)
 			{
+				source.PlayOneShot(selectionSFX);
+
 				mainCanvas.SetActive(true);
 				pauseCanvas.SetActive(false);
 				deathCanvas.SetActive(false);
 				Time.timeScale = 1; 
 			}
-			else if (Time.timeScale == 1)
+			else if (Time.timeScale != 0)
 			{
+				source.PlayOneShot(pauseSFX);
+
 				mainCanvas.SetActive(false);
 				pauseCanvas.SetActive(true);
 				deathCanvas.SetActive(false);
