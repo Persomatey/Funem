@@ -17,8 +17,10 @@ public class MainMenuController : MonoBehaviour
     {
 		GetComponent<DataReaderWriter>().ReadData();
 
-		UnlockButtons(); 
-    }
+		UnlockButtons();
+
+		GameObject.Find("CrossfadeCanvas").GetComponent<Animator>().SetBool("Opening", true);
+	}
 
 	void UnlockButtons()
 	{

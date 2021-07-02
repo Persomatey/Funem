@@ -61,6 +61,27 @@ https://trello.com/b/TFLqyVVL/project-tethered
 <blockquote>
 
 <details>
+<summary>CL-000007 (The Loading Screen Update)</summary>
+<blockquote>
+
+- Made the following changes: 
+	- Fixed the way that the outlines for the ttle screen and credits screen worked 
+		- They look better now, no weird gaps 
+		- Reduced the distance to 3x3 then added another outline to the obj with a distance of 1x1 
+	- Added a loading screen for loading in between scenes 
+		- It displays the following: 
+			- A random tip, trivia, or lore 
+			- A loading icon that is dependant on the aforementioned text 
+			- The text "Loading..." 
+			- It stays on screen for a minimum of 1 second before an option to "continue" appears 
+			- When the player presses the spacebar to continue, the scene loads 
+		- Added screen transitions 
+	- Edited the README to reflect the above changes 
+
+</blockquote>
+</details>
+
+<details>
 <summary>CL-000006 (The Credits Update)</summary>
 <blockquote>
 
