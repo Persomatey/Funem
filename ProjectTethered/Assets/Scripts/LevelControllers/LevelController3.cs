@@ -35,6 +35,9 @@ public class LevelController3 : MonoBehaviour
 		completeOnce = false;
 		gameObject.AddComponent<AudioSource>();
 		source = GetComponent<AudioSource>();
+
+		GameObject.Find("PlayerArrow").transform.position = new Vector3(-0.5f, -4.5f, -5);
+		GameObject.Find("PlayerWASD").transform.position = new Vector3(-4.5f, -4.5f, -5);
 	}
 
 	void Update()

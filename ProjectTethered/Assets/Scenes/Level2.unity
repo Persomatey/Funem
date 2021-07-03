@@ -1524,7 +1524,7 @@ GameObject:
   - component: {fileID: 382766781}
   - component: {fileID: 382766780}
   - component: {fileID: 382766779}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PlateWin1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4096,7 +4096,7 @@ GameObject:
   - component: {fileID: 969507824}
   m_Layer: 0
   m_Name: DoorA1
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5274,7 +5274,7 @@ GameObject:
   - component: {fileID: 1369852018}
   m_Layer: 0
   m_Name: DoorA2
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6394,7 +6394,7 @@ GameObject:
   - component: {fileID: 1610151354}
   - component: {fileID: 1610151353}
   - component: {fileID: 1610151352}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PlateWin2
   m_TagString: Untagged
   m_Icon: {fileID: 0}

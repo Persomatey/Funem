@@ -389,7 +389,7 @@ GameObject:
   - component: {fileID: 31531912}
   m_Layer: 0
   m_Name: Cylinder (2)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -595,7 +595,7 @@ GameObject:
   - component: {fileID: 78535972}
   m_Layer: 0
   m_Name: Cylinder (14)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -693,7 +693,7 @@ GameObject:
   - component: {fileID: 83736011}
   m_Layer: 0
   m_Name: Cylinder (4)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -784,6 +784,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2915922218549104720, guid: 77cee2e990e00154b8698e2e9904f70f, type: 3}
+      propertyPath: awarenessRadius
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 2915922218549104721, guid: 77cee2e990e00154b8698e2e9904f70f, type: 3}
       propertyPath: m_RootOrder
       value: 32
@@ -1423,6 +1427,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2915922218549104720, guid: 77cee2e990e00154b8698e2e9904f70f, type: 3}
+      propertyPath: awarenessRadius
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 2915922218549104721, guid: 77cee2e990e00154b8698e2e9904f70f, type: 3}
       propertyPath: m_RootOrder
       value: 30
@@ -2294,7 +2302,7 @@ GameObject:
   - component: {fileID: 382766781}
   - component: {fileID: 382766780}
   - component: {fileID: 382766779}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PlateWin1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3080,7 +3088,7 @@ GameObject:
   - component: {fileID: 501472063}
   m_Layer: 0
   m_Name: Cylinder (3)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3243,7 +3251,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 509386974}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.5, y: -5.36, z: -5}
+  m_LocalPosition: {x: -3.5, y: -5.35, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7438523}
@@ -5253,7 +5261,7 @@ GameObject:
   - component: {fileID: 888442769}
   m_Layer: 0
   m_Name: Cylinder (5)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5695,7 +5703,7 @@ GameObject:
   - component: {fileID: 969507824}
   m_Layer: 0
   m_Name: DoorA
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5798,6 +5806,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2915922218549104720, guid: 77cee2e990e00154b8698e2e9904f70f, type: 3}
+      propertyPath: awarenessRadius
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 2915922218549104721, guid: 77cee2e990e00154b8698e2e9904f70f, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -5862,7 +5874,7 @@ GameObject:
   - component: {fileID: 1030231956}
   m_Layer: 0
   m_Name: Cylinder (10)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6305,7 +6317,7 @@ GameObject:
   - component: {fileID: 1135132474}
   m_Layer: 0
   m_Name: Cylinder (11)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6773,7 +6785,7 @@ GameObject:
   - component: {fileID: 1238107263}
   m_Layer: 0
   m_Name: Cylinder (7)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6871,7 +6883,7 @@ GameObject:
   - component: {fileID: 1253724065}
   m_Layer: 0
   m_Name: Cylinder
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7300,7 +7312,7 @@ GameObject:
   - component: {fileID: 1427904074}
   m_Layer: 0
   m_Name: Cylinder (1)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7605,6 +7617,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2915922218549104720, guid: 77cee2e990e00154b8698e2e9904f70f, type: 3}
+      propertyPath: awarenessRadius
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 2915922218549104721, guid: 77cee2e990e00154b8698e2e9904f70f, type: 3}
       propertyPath: m_RootOrder
       value: 35
@@ -8303,7 +8319,7 @@ GameObject:
   - component: {fileID: 1610151354}
   - component: {fileID: 1610151353}
   - component: {fileID: 1610151352}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PlateWin2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35434,7 +35450,7 @@ GameObject:
   - component: {fileID: 1648216737}
   m_Layer: 0
   m_Name: Cylinder (15)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35664,6 +35680,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2915922218549104720, guid: 77cee2e990e00154b8698e2e9904f70f, type: 3}
+      propertyPath: awarenessRadius
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 2915922218549104721, guid: 77cee2e990e00154b8698e2e9904f70f, type: 3}
       propertyPath: m_RootOrder
       value: 28
@@ -35818,7 +35838,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1721797945}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.5, y: -5.36, z: -5}
+  m_LocalPosition: {x: -0.5, y: -5.35, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1032485723}
@@ -36225,7 +36245,7 @@ GameObject:
   - component: {fileID: 1771258622}
   m_Layer: 0
   m_Name: Cylinder (9)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36510,7 +36530,7 @@ GameObject:
   - component: {fileID: 1788173279}
   m_Layer: 0
   m_Name: Cylinder (12)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36979,7 +36999,7 @@ GameObject:
   - component: {fileID: 1869534161}
   m_Layer: 0
   m_Name: Cylinder (13)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37392,7 +37412,7 @@ GameObject:
   - component: {fileID: 1996037340}
   m_Layer: 0
   m_Name: Cylinder (8)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37645,7 +37665,7 @@ GameObject:
   - component: {fileID: 2113996112}
   m_Layer: 0
   m_Name: Cylinder (6)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

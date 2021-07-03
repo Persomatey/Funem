@@ -20,7 +20,10 @@ public class Buttons : MonoBehaviour
 	public bool readyToSwitch;
 	private string sceneToSwitch;
 	private AsyncOperation newScene;
-	public Sprite progressBarFinishedSprite; 
+	public Sprite progressBarFinishedSprite;
+
+	private float fadeTime = 0.5f;
+	private float minTimeInLoading = 0.5f; 
 
 	private void Start()
 	{
@@ -65,9 +68,9 @@ public class Buttons : MonoBehaviour
 		Destroy(GameObject.Find("PlayerWASD"));
 		Destroy(GameObject.Find("PlayerController"));
 
-		yield return new WaitForSeconds(1.0f);
+		yield return new WaitForSeconds(fadeTime);
 		loadingCanvas.SetActive(true);
-		yield return new WaitForSeconds(1.0f);
+		yield return new WaitForSeconds(minTimeInLoading);
 
 		newScene = SceneManager.LoadSceneAsync(sceneToSwitch, LoadSceneMode.Additive);
 		newScene.allowSceneActivation = false;
@@ -156,9 +159,9 @@ public class Buttons : MonoBehaviour
 		Destroy(GameObject.Find("PlayerWASD"));
 		Destroy(GameObject.Find("PlayerController"));
 
-		yield return new WaitForSeconds(1.0f);
+		yield return new WaitForSeconds(fadeTime);
 		loadingCanvas.SetActive(true);
-		yield return new WaitForSeconds(1.0f);
+		yield return new WaitForSeconds(minTimeInLoading);
 
 		newScene = SceneManager.LoadSceneAsync(sceneToSwitch, LoadSceneMode.Additive);
 		newScene.allowSceneActivation = false;
@@ -201,9 +204,9 @@ public class Buttons : MonoBehaviour
 		Destroy(GameObject.Find("PlayerWASD"));
 		Destroy(GameObject.Find("PlayerController"));
 
-		yield return new WaitForSeconds(1.0f);
+		yield return new WaitForSeconds(fadeTime);
 		loadingCanvas.SetActive(true);
-		yield return new WaitForSeconds(1.0f);
+		yield return new WaitForSeconds(minTimeInLoading);
 
 		newScene = SceneManager.LoadSceneAsync(sceneToSwitch, LoadSceneMode.Additive);
 		newScene.allowSceneActivation = false;
@@ -245,9 +248,9 @@ public class Buttons : MonoBehaviour
 		Destroy(GameObject.Find("PlayerWASD"));
 		Destroy(GameObject.Find("PlayerController"));
 
-		yield return new WaitForSeconds(1.0f);
+		yield return new WaitForSeconds(fadeTime);
 		loadingCanvas.SetActive(true);
-		yield return new WaitForSeconds(1.0f);
+		yield return new WaitForSeconds(minTimeInLoading);
 
 		newScene = SceneManager.LoadSceneAsync(sceneToSwitch, LoadSceneMode.Additive);
 		newScene.allowSceneActivation = false;
@@ -289,9 +292,9 @@ public class Buttons : MonoBehaviour
 		Destroy(GameObject.Find("PlayerWASD"));
 		Destroy(GameObject.Find("PlayerController"));
 
-		yield return new WaitForSeconds(1.0f);
+		yield return new WaitForSeconds(fadeTime);
 		loadingCanvas.SetActive(true);
-		yield return new WaitForSeconds(1.0f);
+		yield return new WaitForSeconds(minTimeInLoading);
 
 		newScene = SceneManager.LoadSceneAsync(sceneToSwitch, LoadSceneMode.Additive);
 		newScene.allowSceneActivation = false;
@@ -333,9 +336,9 @@ public class Buttons : MonoBehaviour
 		Destroy(GameObject.Find("PlayerWASD"));
 		Destroy(GameObject.Find("PlayerController"));
 
-		yield return new WaitForSeconds(1.0f);
+		yield return new WaitForSeconds(fadeTime);
 		loadingCanvas.SetActive(true);
-		yield return new WaitForSeconds(1.0f);
+		yield return new WaitForSeconds(minTimeInLoading);
 
 		newScene = SceneManager.LoadSceneAsync(sceneToSwitch, LoadSceneMode.Additive);
 		newScene.allowSceneActivation = false;
@@ -377,9 +380,9 @@ public class Buttons : MonoBehaviour
 		Destroy(GameObject.Find("PlayerWASD"));
 		Destroy(GameObject.Find("PlayerController"));
 
-		yield return new WaitForSeconds(1.0f);
+		yield return new WaitForSeconds(fadeTime);
 		loadingCanvas.SetActive(true);
-		yield return new WaitForSeconds(1.0f);
+		yield return new WaitForSeconds(minTimeInLoading);
 
 		newScene = SceneManager.LoadSceneAsync(sceneToSwitch, LoadSceneMode.Additive);
 		newScene.allowSceneActivation = false;
@@ -421,9 +424,9 @@ public class Buttons : MonoBehaviour
 		Destroy(GameObject.Find("PlayerWASD"));
 		Destroy(GameObject.Find("PlayerController"));
 
-		yield return new WaitForSeconds(1.0f);
+		yield return new WaitForSeconds(fadeTime);
 		loadingCanvas.SetActive(true);
-		yield return new WaitForSeconds(1.0f);
+		yield return new WaitForSeconds(minTimeInLoading);
 
 		newScene = SceneManager.LoadSceneAsync(sceneToSwitch, LoadSceneMode.Additive);
 		newScene.allowSceneActivation = false;

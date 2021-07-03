@@ -17,7 +17,14 @@ public class Enemy : MonoBehaviour
 	public AudioClip hitSFX;
 	public AudioClip deathSFX;
 
-	private bool coStarted; 
+	private bool coStarted;
+
+	public LayerMask toIgnore;
+
+	private GameObject playerWasd;
+	private GameObject playerArro; 
+
+	public int awarenessRadius = 5; 
 
 	void Start()
     {
@@ -26,7 +33,10 @@ public class Enemy : MonoBehaviour
 		speed = 3;
 		hit = false;
 		source = GetComponent<AudioSource>();
-		coStarted = false; 
+		coStarted = false;
+
+		playerWasd = GameObject.Find("PlayerWASD");
+		playerArro = GameObject.Find("PlayerArrow"); 
 	}
 
     void FixedUpdate()
@@ -34,7 +44,57 @@ public class Enemy : MonoBehaviour
 		CheckHealth();
 		UpdateHealthBar(); 
 		Behavior();
-		SpriteFlipper(); 
+		SpriteFlipper();
+	}
+
+	private void Update()
+	{
+		CheckForPlayer(); 
+	}
+
+	void CheckForPlayer()
+	{
+		Vector2 directionArro = playerArro.transform.position - transform.position;
+		Vector2 directionWasd = playerWasd.transform.position - transform.position;
+
+		RaycastHit2D hitArro = Physics2D.Raycast(transform.position, directionArro, awarenessRadius, ~toIgnore);
+		RaycastHit2D hitWasd = Physics2D.Raycast(transform.position, directionWasd, awarenessRadius, ~toIgnore);
+
+		if (hitArro.collider && hitArro.collider.tag != "Wall")
+		{
+			isAware = true;
+
+			if (playerObj)
+			{
+				playerObjOther = playerObj;
+			}
+
+			playerObj = hitArro.collider.gameObject;
+
+			Debug.DrawRay(transform.position, directionArro * 0.25f, Color.red);
+		}
+		else
+		{
+			Debug.DrawRay(transform.position, directionArro * 0.25f, Color.white);
+		}
+
+		if (hitWasd.collider && hitWasd.collider.tag != "Wall")
+		{
+			isAware = true;
+
+			if (playerObj)
+			{
+				playerObjOther = playerObj;
+			}
+
+			playerObj = hitWasd.collider.gameObject;
+
+			Debug.DrawRay(transform.position, directionWasd * 0.25f, Color.red);
+		}
+		else 
+		{
+			Debug.DrawRay(transform.position, directionWasd * 0.25f, Color.white);
+		}
 	}
 
 	void SpriteFlipper()
@@ -130,47 +190,17 @@ public class Enemy : MonoBehaviour
 				StartCoroutine(PlayerForceStopper());
 			}
 		}
+
 		if (col.gameObject.tag == "Wall")
 		{
 			GetComponent<Rigidbody2D>().velocity = Vector2.zero;
 			hit = false;
 		}
-	}
 
-	void OnTriggerEnter2D(Collider2D col)
-	{
-		if (col.gameObject.tag == "Player")
+		if (col.gameObject.tag == "Enemy")
 		{
-			isAware = true;
-			if (playerObj)
-			{
-				playerObjOther = playerObj;
-			}
-			playerObj = col.gameObject; 
-		}
-	}
-
-	void OnTriggerExit2D(Collider2D col)
-	{
-		if (col.gameObject.tag == "Player")
-		{
-			if (col.gameObject == playerObjOther)
-			{
-				playerObjOther = null;
-			}
-			else
-			{
-				if(playerObjOther)
-				{
-					playerObj = playerObjOther;
-					playerObjOther = null; 
-				}
-				else
-				{
-					isAware = false;
-					playerObj = null;
-				}
-			}
+			GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+			col.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
 		}
 	}
 

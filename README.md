@@ -61,6 +61,26 @@ https://trello.com/b/TFLqyVVL/project-tethered
 <blockquote>
 
 <details>
+<summary>CL-000008 (The Fixing Enemies Update)</summary>
+<blockquote>
+
+- Made the following changes: 
+	- Completely redid the way that the enemy awareness works 
+		- No longer based on triggers, it now works by raycasting the distance to the players 
+		- Objects tagged as a "Wall" block that raycast early 
+	- Made it so that each level controller sets the starting position of the players 
+		- There was a weird bug where the player would sometimes spawn in different locations based on the last input from the previous level 
+	- Speed up the fade in/out transition time 
+		- Edited the animations themselves in the Animations folder 
+		- Also made a private float in the Buttons.cs script called fadeTime which will control the acctual waiting for the animaiton to finish 
+	- Lowered the minimum wait time in between levels 
+		- This is now a private float in the Buttons.cs script called minTimeInLoading 
+	- Edited the README to reflect the above changes 
+
+</blockquote>
+</details>
+
+<details>
 <summary>CL-000007 (The Loading Screen Update)</summary>
 <blockquote>
 

@@ -564,7 +564,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6111033362438866557, guid: da7cfa8a52571f64f9f2da3b0a196449, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4
+      value: -4.5
       objectReference: {fileID: 0}
     - target: {fileID: 6111033362438866557, guid: da7cfa8a52571f64f9f2da3b0a196449, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1257,7 +1257,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6111033362438866557, guid: da7cfa8a52571f64f9f2da3b0a196449, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6
+      value: 6.5
       objectReference: {fileID: 0}
     - target: {fileID: 6111033362438866557, guid: da7cfa8a52571f64f9f2da3b0a196449, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1411,7 +1411,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6111033362438866557, guid: da7cfa8a52571f64f9f2da3b0a196449, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.5
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6111033362438866557, guid: da7cfa8a52571f64f9f2da3b0a196449, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1800,7 +1800,7 @@ GameObject:
   - component: {fileID: 382766781}
   - component: {fileID: 382766780}
   - component: {fileID: 382766779}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PlateWin1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1932,7 +1932,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6111033362438866557, guid: da7cfa8a52571f64f9f2da3b0a196449, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.5
+      value: -3
       objectReference: {fileID: 0}
     - target: {fileID: 6111033362438866557, guid: da7cfa8a52571f64f9f2da3b0a196449, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2508,7 +2508,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2915922218549104721, guid: 77cee2e990e00154b8698e2e9904f70f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.58
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2915922218549104721, guid: 77cee2e990e00154b8698e2e9904f70f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2555,13 +2555,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2915922218549104720, guid: 77cee2e990e00154b8698e2e9904f70f, type: 3}
+      propertyPath: toIgnore.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 2915922218549104721, guid: 77cee2e990e00154b8698e2e9904f70f, type: 3}
       propertyPath: m_RootOrder
       value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 2915922218549104721, guid: 77cee2e990e00154b8698e2e9904f70f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.47
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2915922218549104721, guid: 77cee2e990e00154b8698e2e9904f70f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2602,6 +2606,10 @@ PrefabInstance:
     - target: {fileID: 2915922218549104723, guid: 77cee2e990e00154b8698e2e9904f70f, type: 3}
       propertyPath: m_Name
       value: Enemy (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2915922218549104735, guid: 77cee2e990e00154b8698e2e9904f70f, type: 3}
+      propertyPath: m_UsedByEffector
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77cee2e990e00154b8698e2e9904f70f, type: 3}
@@ -4720,7 +4728,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6540179788558269161, guid: 8eb6690afef920041ba07cb06193a908, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9
+      value: 9.5
       objectReference: {fileID: 0}
     - target: {fileID: 6540179788558269161, guid: 8eb6690afef920041ba07cb06193a908, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5100,7 +5108,7 @@ GameObject:
   - component: {fileID: 1610151354}
   - component: {fileID: 1610151353}
   - component: {fileID: 1610151352}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PlateWin2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33045,7 +33053,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6111033362438866557, guid: da7cfa8a52571f64f9f2da3b0a196449, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1
+      value: -1.5
       objectReference: {fileID: 0}
     - target: {fileID: 6111033362438866557, guid: da7cfa8a52571f64f9f2da3b0a196449, type: 3}
       propertyPath: m_LocalPosition.y
@@ -33879,7 +33887,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6540179788558269161, guid: 8eb6690afef920041ba07cb06193a908, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.5
+      value: -6
       objectReference: {fileID: 0}
     - target: {fileID: 6540179788558269161, guid: 8eb6690afef920041ba07cb06193a908, type: 3}
       propertyPath: m_LocalPosition.y

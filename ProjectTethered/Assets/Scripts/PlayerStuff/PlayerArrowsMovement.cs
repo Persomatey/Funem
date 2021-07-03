@@ -34,7 +34,7 @@ public class PlayerArrowsMovement : MonoBehaviour
 		line = GetComponent<LineRenderer>();
 		//line.material = new Material(Shader.Find("Sprites/Default"));
 		line.widthMultiplier = 0.2f;
-		float alpha = 1.0f;
+		//float alpha = 1.0f;
 		sfxPlaying = false; 
 	}
 
