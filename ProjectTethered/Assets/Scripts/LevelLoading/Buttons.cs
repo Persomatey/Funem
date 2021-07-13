@@ -15,7 +15,6 @@ public class Buttons : MonoBehaviour
 	public AudioClip selectionSFX;
 	public GameObject menuCanvas;
 	public GameObject creditsCanvas;
-	private Animator transition;
 
 	public bool readyToSwitch;
 	private string sceneToSwitch;
@@ -27,8 +26,6 @@ public class Buttons : MonoBehaviour
 
 	private void Start()
 	{
-		transition = GameObject.Find("CrossfadeCanvas").GetComponent<Animator>(); 
-
 		gameObject.AddComponent<AudioSource>();
 		source = GetComponent<AudioSource>(); 
 
@@ -62,7 +59,7 @@ public class Buttons : MonoBehaviour
 	{
 		Time.timeScale = 1;
 		sceneToSwitch = "MainMenu";
-		transition.SetTrigger("Start");
+		GameObject.Find("CrossfadeCanvas").GetComponent<Animator>().SetTrigger("Start");
 
 		Destroy(GameObject.Find("PlayerArrow"));
 		Destroy(GameObject.Find("PlayerWASD"));
@@ -153,7 +150,7 @@ public class Buttons : MonoBehaviour
 	{
 		Time.timeScale = 1;
 		sceneToSwitch = SceneManager.GetActiveScene().name;
-		transition.SetTrigger("Start");
+		GameObject.Find("CrossfadeCanvas").GetComponent<Animator>().SetTrigger("Start");
 
 		Destroy(GameObject.Find("PlayerArrow"));
 		Destroy(GameObject.Find("PlayerWASD"));
@@ -198,7 +195,7 @@ public class Buttons : MonoBehaviour
 	{
 		Time.timeScale = 1;
 		sceneToSwitch = "Level1";
-		transition.SetTrigger("Start");
+		GameObject.Find("CrossfadeCanvas").GetComponent<Animator>().SetTrigger("Start");
 
 		Destroy(GameObject.Find("PlayerArrow"));
 		Destroy(GameObject.Find("PlayerWASD"));
@@ -242,7 +239,7 @@ public class Buttons : MonoBehaviour
 	{
 		Time.timeScale = 1;
 		sceneToSwitch = "Level2";
-		transition.SetTrigger("Start");
+		GameObject.Find("CrossfadeCanvas").GetComponent<Animator>().SetTrigger("Start");
 
 		Destroy(GameObject.Find("PlayerArrow"));
 		Destroy(GameObject.Find("PlayerWASD"));
@@ -286,7 +283,7 @@ public class Buttons : MonoBehaviour
 	{
 		Time.timeScale = 1;
 		sceneToSwitch = "Level3";
-		transition.SetTrigger("Start");
+		GameObject.Find("CrossfadeCanvas").GetComponent<Animator>().SetTrigger("Start");
 
 		Destroy(GameObject.Find("PlayerArrow"));
 		Destroy(GameObject.Find("PlayerWASD"));
@@ -330,7 +327,7 @@ public class Buttons : MonoBehaviour
 	{
 		Time.timeScale = 1;
 		sceneToSwitch = "Level4";
-		transition.SetTrigger("Start");
+		GameObject.Find("CrossfadeCanvas").GetComponent<Animator>().SetTrigger("Start");
 
 		Destroy(GameObject.Find("PlayerArrow"));
 		Destroy(GameObject.Find("PlayerWASD"));
@@ -374,7 +371,7 @@ public class Buttons : MonoBehaviour
 	{
 		Time.timeScale = 1;
 		sceneToSwitch = "Level5";
-		transition.SetTrigger("Start");
+		GameObject.Find("CrossfadeCanvas").GetComponent<Animator>().SetTrigger("Start");
 
 		Destroy(GameObject.Find("PlayerArrow"));
 		Destroy(GameObject.Find("PlayerWASD"));
@@ -418,7 +415,7 @@ public class Buttons : MonoBehaviour
 	{
 		Time.timeScale = 1;
 		sceneToSwitch = "Level6";
-		transition.SetTrigger("Start");
+		GameObject.Find("CrossfadeCanvas").GetComponent<Animator>().SetTrigger("Start");
 
 		Destroy(GameObject.Find("PlayerArrow"));
 		Destroy(GameObject.Find("PlayerWASD"));

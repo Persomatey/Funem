@@ -53,8 +53,8 @@ public class PlayerArrowsMovement : MonoBehaviour
 
 		line = GetComponent<LineRenderer>();
 
-		line.SetPosition(0, new Vector3(wasd.transform.position.x, wasd.transform.position.y, -4.0f));
-		line.SetPosition(1, new Vector3(transform.position.x, transform.position.y, -4.0f));
+		line.SetPosition(0, new Vector3(wasd.transform.position.x, wasd.transform.position.y, -5.0f));
+		line.SetPosition(1, new Vector3(transform.position.x, transform.position.y, -5.0f));
 
 		if (Vector3.Distance(transform.position, wasd.transform.position) >= joint.distance)
 		{

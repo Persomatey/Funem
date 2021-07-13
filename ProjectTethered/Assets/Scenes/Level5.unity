@@ -4181,8 +4181,8 @@ MonoBehaviour:
   wasd: {fileID: 0}
   arrow: {fileID: 0}
   ropeMeterArr: []
-  ropeFull: {fileID: 21300000, guid: d36132ad34e5cdc44b22c10a01b8f04d, type: 3}
-  ropeLoose: {fileID: 21300000, guid: fc4f64c5640bf054bb93be29180b3040, type: 3}
+  ropeFull: {fileID: 21300000, guid: 283ead00370829b49b3555d31b3aed54, type: 3}
+  ropeLoose: {fileID: 21300000, guid: 4ccb639869d84974bacd69bd5a13d576, type: 3}
   wasdItem: 0
   arrowItem: 0
   itemImages:

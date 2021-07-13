@@ -61,6 +61,18 @@ https://trello.com/b/TFLqyVVL/project-tethered
 <blockquote>
 
 <details>
+<summary>CL-000009 (The Quality Assurance Update)</summary>
+<blockquote>
+
+- Made the following changes: 
+	- Fixed bug where the rope meter extends out of the corners of it's container in levels 2-6 
+	- Fixed bug where the when the player loads into the Main Menu, then into a level, then back into the Main Menu, they won't be able to load into a level again 
+	- Edited the README to reflect the above changes 
+
+</blockquote>
+</details>
+
+<details>
 <summary>CL-000008 (The Fixing Enemies Update)</summary>
 <blockquote>
 
